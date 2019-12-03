@@ -1,0 +1,91 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block head %}
+        <!-- coverr JavaScript -->
+        <script>
+			//Funcion que tome el alto actual del video y redmiensione el hero-module y el video-container cada vez que se redimensione la ventana
+            $(document).ready(function(){
+				setHeroModuleHeigth();
+				
+				$(window).on('resize', function() {
+					setHeroModuleHeigth();
+				});
+            });
+			function setHeroModuleHeigth(){
+				var height = document.getElementById('video-coverr').offsetHeight;
+                var unitHeight = parseInt(height) + 'px';
+                $('.homepage-hero-module').css('height',unitHeight);
+				$('.video-container').css('height',unitHeight);
+			};
+        </script>
+{% endblock %}
+
+{% block contenido %}
+
+        <!--Coverr -->
+        <div class="homepage-hero-module">
+            <div style="z-index: -1;" class="video-container">
+				<div class="filter"></div>
+                <video style="z-index: -1;" id="video-coverr" autoplay loop muted playsinline src="{% static 'core/media/coverr/mp4/Coffee-Twins.mp4' %}" class="fillWidth"></video>
+				<div class="poster hidden">
+					<img style="z-index: -2;" src="{% static 'core/media/coverr/poster/Coffee-Twins.jpg' %}" alt="">
+				</div>
+				<h1 style="text-align: center!important; margin-top: 10%;" class="display-4 text-white font-weight-bold responsive1">CoffeeExpress</h1>
+				<h1 style="text-align: center!important;" class="display-5 text-white responsive3">Todos amamos un buen café.</h1>
+            </div>
+        </div>
+
+		<!-- Carrusel 1 -->
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            <div class="col-xs-12" style="margin-top:1%;">
+                <div id="carrusel1" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src=" {% static 'core/img/weather/café-naturaleza.jpg' %}" alt="cafe-naturaleza">
+							<div class="carousel-caption d-md-block">
+								<h1 class="responsive3">Nosotros cuidamos el planeta, cuídalo tú también</h1>
+								<p>Cada GreenCoffee vendido es igual a un árbol sembrado.</p>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Carrusel 2 -->
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            <div class="col-xs-12" style="margin-top:1%;">
+                <div id="carrusel2" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{% static 'core/img/weather/coffee-sunny.jpg' %}" alt="cafe-naturaleza">
+							<div class="carousel-caption d-md-block">
+								<h1 class="responsive3">Con CoffeeExpress no importa el clima</h1>
+								<p>Sal a la cafetería o pide tu café a domicilio.</p>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+		
+		<!-- Carrusel 3 -->
+        <div class="row" style="margin-right: 0px; margin-left: 0px;">
+            <div class="col-xs-12" style="margin-top:1%;">
+                <div id="carrusel3" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="{% static 'core/img/weather/café-grano.jpg' %}" alt="cafe-naturaleza">
+							<div class="carousel-caption d-md-block">
+								<h1 class="responsive3">Granos de café finamente seleccionados</h1>
+								<p>Disfruta de la pureza del café 100% arábigo.</p>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+{% endblock %}

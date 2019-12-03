@@ -1,0 +1,130 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block navbar %}
+<a class="nav-item nav-link" href="{% url 'home' %}">Inicio <span class="sr-only">(current)</span></a>
+<a class="nav-item nav-link active" href="{% url 'carta' %}">Carta</a>
+<a class="nav-item nav-link" href="{% url 'nosotros' %}">Nosotros</a>
+<a class="nav-item nav-link" href="{% url 'contactanos' %}">Contáctanos</a>
+{% endblock %}
+
+{% block contenido %}
+		<!-- Carta -->
+        <div>
+			<img src="{% static 'core/img/café-banner-3.jpg' %}" class="img-fluid" alt="Responsive image" width="100%" style="margin-top: -26%;">
+            <h1 style="text-align: center!important; margin-top: -15%;" class="display-4 text-light responsive4">Carta</h1>
+        </div>
+		
+		<h1 style="text-align: center!important; margin-top:15%;" class="display-4 text-black responsive4">Espresso</h1>
+		<h3 style="text-align: center!important;" class="text-black reponsive2">Disfrútalo Caliente o Frío</h3>
+		
+		<!-- Cards 1 -->
+		<div class="container">
+			<div class="card-group">
+			  <div class="card">
+				<img src="{% static 'core/img/cards/green-coffee.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Green Coffee*</h5>
+				  <p class="card-text">Por la compra de un GreenCoffee estaras apoyando a la fundación PLANTEMOS.</p>
+				  <p class="card-text"><small class="text-muted">Por $2.990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/caffee-latte.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Café Latte</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/CaffeMocha.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Café Moca</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<!-- Cards 2 -->
+		<div class="container">
+			<div class="card-group">
+			  <div class="card">
+				<img src="{% static 'core/img/cards/Cappuccino.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Capuccino</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/caramel-macchiato.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Macchiato de caramelo</h5>
+				  <p class="card-text"><small class="text-muted">Por $1.990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/iced-cafe.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Moca Helado</h5>
+				  <p class="card-text"><small class="text-muted">Por $1.990 c/u</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		<!-- Cards 3 -->
+		<div class="container">
+			<div class="card-group">
+			  <div class="card">
+				<img src="{% static 'core/img/cards/white-moka.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Moca Blanco</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/cafe-espresso.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Café Espresso</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/vanilla-coffee.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Latte Vainilla</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+		
+		<h1 style="text-align: center!important; margin-top:5%;" class="display-4 text-black responsive4">Bakery</h1>
+		
+		<!-- Cards 4 -->
+		<div class="container">
+			<div class="card-group">
+			  <div class="card">
+				<img src="{% static 'core/img/cards/bagel.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Bagel</h5>
+				  <p class="card-text"><small class="text-muted">Por $790 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/chocolate-cookie.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Galletas de chocolate</h5>
+				  <p class="card-text"><small class="text-muted">Por $990 c/u</small></p>
+				</div>
+			  </div>
+			  <div class="card">
+				<img src="{% static 'core/img/cards/muffin.jpg' %}" class="card-img-top" alt="...">
+				<div class="card-body">
+				  <h5 class="card-title">Muffin</h5>
+				  <p class="card-text"><small class="text-muted">Por $490 c/u</small></p>
+				</div>
+			  </div>
+			</div>
+		</div>
+{% endblock %}
